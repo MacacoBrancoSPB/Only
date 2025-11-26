@@ -1,16 +1,23 @@
-# This is a sample Python script.
+import pytest
+import sys
+import os
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+def main():
+    test_file = "Only_tests.py"
+    if not os.path.exists(test_file):
+        print(f"Файл {test_file} не найден. Убедитесь, что он находится рядом с main.py")
+        sys.exit(1)
+    print("Запуск тестов Playwright...\n")
 
+    exit_code = pytest.main([
+        test_file,
+        "-v",               # подробный вывод
+        "--disable-warnings",
+        "--maxfail=1"
+    ])
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+    # Выход с кодом выполнения
+    sys.exit(exit_code)
 
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+if __name__ == "__main__":
+    main()
