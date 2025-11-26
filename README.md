@@ -1,17 +1,19 @@
-# Автотесты для футера сайта [Only Digital](https://only.digital/)
+## 🔹 **1. Установка Playwright**
 
-## Запуск тестов
-### 1. Установка зависимостей
-```sh
-pip install -r requirements.txt
-```
+Playwright Version 1.56.0
 
-### 2. Установка браузеров для playwright
-```sh
-playwright instal chromium
-```
+Комманданая строка Terminal: pip install playwright
 
-### 3. Запуск
-```sh
-python main.py
-```
+## 🔹 **2. Установка Pytest**
+pytest 8.4.2
+
+Комманданая строка Terminal: pip install pytest
+
+## 🔹 **3. Установка плагина Pytest**
+
+pip install pytest-playwright
+
+## 🔹 **4. Python**
+
+python3.9
+
