@@ -17,3 +17,6 @@ pip install pytest-playwright
 
 python3.9
 
+## 🔹 **4. Запуск тестов**
+
+В Terminal запустить тесты командой python main.py  
